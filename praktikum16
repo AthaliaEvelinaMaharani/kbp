@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            border: 2px solid #dedede5f;
+            padding: 15px;
+            margin: 15px;
+        }
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            max-width: 600px;
+            margin: 30px auto;
+            font-family: sans-serif;
+            color: #333;
+            background-color: #f0f8ff;
+        }
+        #container1 {
+            background-color: rgb(234, 37, 19);
+        }
+        #container2 {
+            background-color: rgb(220, 189, 14);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Judul</h1>
+    <section id="a">
+        <div id="container1">
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <a href="https://www.google.com">Link</a>
+        </div>
+    </section>
+    <div id="container2">
+        <ul>
+            <li class="list">List 1</li>
+            <li class="list">List 2</li>
+            <li class="list">List 3</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("container1").style.backgroundColor = "Lightyellow";
+        document.getElementById("container2").style.backgroundColor = "Lightred";
+        const listItems = document.querySelectorAll("li");
+        for (let i = 0; i < listItems.length; i++) {
+            listItems[i].textContent = `List Baru ${i + 1}`;
+            listItems[i].style.backgroundColor = "red";
+            listItems[i].style.color = "white";
+            listItems[i].style.fontSize = "18px";
+            listItems[i].style.fontFamily = "Courier New";
+        }
+    </script>
+</body>
+</html>
